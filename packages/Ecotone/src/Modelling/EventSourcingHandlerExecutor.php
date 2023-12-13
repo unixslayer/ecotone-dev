@@ -26,7 +26,9 @@ final class EventSourcingHandlerExecutor implements DefinedObject
     {
         $aggregate = $existingAggregate ?? (new $this->aggregateClassName());
         foreach ($events as $event) {
+            $metadata = [];
             if ($event instanceof Event) {
+                $metadata = $event->getMetadata();
                 $event = $event->getPayload();
             }
             if ($event instanceof SnapshotEvent) {
@@ -38,7 +40,7 @@ final class EventSourcingHandlerExecutor implements DefinedObject
             $eventType = TypeDescriptor::createFromVariable($event);
             foreach ($this->eventSourcingHandlerMethods as $methodInterface) {
                 if ($methodInterface->getFirstParameter()->canBePassedIn($eventType)) {
-                    $aggregate->{$methodInterface->getMethodName()}($event);
+                    $aggregate->{$methodInterface->getMethodName()}($event, $metadata);
                 }
             }
         }
@@ -74,8 +76,11 @@ final class EventSourcingHandlerExecutor implements DefinedObject
                 if ($methodToCheck->isStaticallyCalled()) {
                     throw InvalidArgumentException::create("{$methodToCheck} is Event Sourcing Handler and should not be static.");
                 }
-                if ($methodToCheck->getInterfaceParameterAmount() !== 1) {
-                    throw InvalidArgumentException::create("{$methodToCheck} is Event Sourcing Handler and should not be have only one parameter type hinted for handled event.");
+                if ($methodToCheck->getInterfaceParameterAmount() > 2) {
+                    throw InvalidArgumentException::create("{$methodToCheck} is Event Sourcing Handler and should have at most two parameters: #1 type hinted for handled event and #2 type hinted for metadata.");
+                }
+                if ($methodToCheck->getInterfaceParameterAmount() === 2 && $methodToCheck->getSecondParameter()->getTypeHint() !== 'array') {
+                    throw InvalidArgumentException::create("{$methodToCheck} is Event Sourcing Handler and #2 parameter can be only defined as array for using metadata.");
                 }
                 if (! $methodToCheck->hasReturnTypeVoid()) {
                     throw InvalidArgumentException::create("{$methodToCheck} is Event Sourcing Handler and should return void return type");
