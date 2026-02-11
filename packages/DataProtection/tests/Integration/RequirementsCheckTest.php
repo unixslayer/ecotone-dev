@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Test\Ecotone\DataProtection\Integration;
 
-use Defuse\Crypto\Key;
 use Ecotone\DataProtection\Configuration\DataProtectionConfiguration;
+use Ecotone\DataProtection\Encryption\Key;
 use Ecotone\Lite\EcotoneLite;
 use Ecotone\Messaging\Config\ModulePackageList;
 use Ecotone\Messaging\Config\ServiceConfiguration;

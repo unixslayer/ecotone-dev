@@ -6,7 +6,7 @@
 
 namespace Ecotone\DataProtection\Configuration;
 
-use Defuse\Crypto\Key;
+use Ecotone\DataProtection\Encryption\Key;
 use Ecotone\Messaging\Support\Assert;
 
 class DataProtectionConfiguration
