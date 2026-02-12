@@ -8,7 +8,6 @@ use Ecotone\DataProtection\Encryption\Exception\CryptoException;
 use Ecotone\DataProtection\Encryption\Exception\EnvironmentIsBrokenException;
 use Ecotone\DataProtection\Encryption\Exception\IOException;
 use Ecotone\DataProtection\Encryption\Exception\WrongKeyOrModifiedCiphertextException;
-use SensitiveParameter;
 
 use function fclose;
 use function feof;
@@ -29,6 +28,9 @@ use function is_resource;
 use function is_string;
 use function openssl_decrypt;
 use function openssl_encrypt;
+
+use SensitiveParameter;
+
 use function stream_set_read_buffer;
 use function stream_set_write_buffer;
 

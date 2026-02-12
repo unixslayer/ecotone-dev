@@ -8,12 +8,12 @@ namespace Ecotone\DataProtection\Encryption;
 // and don't use `self::`.
 
 
-use Ecotone\DataProtection\Encryption\Exception\BadFormatException;
-use Ecotone\DataProtection\Encryption\Exception\CryptoException;
-use Ecotone\DataProtection\Encryption\Exception\WrongKeyOrModifiedCiphertextException;
 use function chr;
 
+use Ecotone\DataProtection\Encryption\Exception\BadFormatException;
+use Ecotone\DataProtection\Encryption\Exception\CryptoException;
 use Ecotone\DataProtection\Encryption\Exception\EnvironmentIsBrokenException;
+use Ecotone\DataProtection\Encryption\Exception\WrongKeyOrModifiedCiphertextException;
 
 use function hash_hmac;
 use function in_array;

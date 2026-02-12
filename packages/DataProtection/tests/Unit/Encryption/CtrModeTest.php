@@ -2,8 +2,13 @@
 
 namespace Test\Ecotone\DataProtection\Unit\Encryption;
 
+use function bin2hex;
+
 use Ecotone\DataProtection\Encryption\Core;
 use Ecotone\DataProtection\Encryption\Exception\EnvironmentIsBrokenException;
+
+use function hex2bin;
+
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
@@ -70,8 +75,8 @@ class CtrModeTest extends TestCase
     #[DataProvider('counterTestVectorProvider')]
     public function test_increment_counter_test_vector($start, $end, $inc): void
     {
-        $actual_end = Core::incrementCounter(\hex2bin($start), $inc);
-        self::assertSame($end, \bin2hex($actual_end), $start . ' + ' . $inc);
+        $actual_end = Core::incrementCounter(hex2bin($start), $inc);
+        self::assertSame($end, bin2hex($actual_end), $start . ' + ' . $inc);
     }
 
     public function test_fuzz_increment_counter(): void
@@ -92,9 +97,9 @@ class CtrModeTest extends TestCase
             $expected_end = str_repeat("\xFF", $offset + 1) . str_repeat("\x00", 16 - $offset - 1);
             $actual_end   = Core::incrementCounter($start, 1);
             self::assertSame(
-                \bin2hex($expected_end),
-                \bin2hex($actual_end),
-                \bin2hex($start) . ' + ' . 1
+                bin2hex($expected_end),
+                bin2hex($actual_end),
+                bin2hex($start) . ' + ' . 1
             );
         }
 
@@ -121,9 +126,9 @@ class CtrModeTest extends TestCase
             $actual_end = Core::incrementCounter($start, $rand_b);
 
             self::assertSame(
-                \bin2hex($expected_end),
-                \bin2hex($actual_end),
-                \bin2hex($start) . ' + ' . $rand_b
+                bin2hex($expected_end),
+                bin2hex($actual_end),
+                bin2hex($start) . ' + ' . $rand_b
             );
         }
     }

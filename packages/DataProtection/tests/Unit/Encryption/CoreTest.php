@@ -5,9 +5,10 @@ namespace Test\Ecotone\DataProtection\Unit\Encryption;
 use Ecotone\DataProtection\Encryption\Core;
 use Ecotone\DataProtection\Encryption\Exception\CryptoException;
 use InvalidArgumentException;
-use PHPUnit\Framework\TestCase;
 
 use function mb_substr;
+
+use PHPUnit\Framework\TestCase;
 
 /**
  * @internal

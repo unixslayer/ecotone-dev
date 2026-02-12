@@ -1,0 +1,51 @@
+{
+  "name": "ecotone",
+  "owner": {
+    "name": "Ecotone Framework",
+    "email": "support@simplycodedsoftware.com"
+  },
+  "metadata": {
+    "description": "Skills for building message-driven applications with Ecotone Framework (DDD, CQRS, Event Sourcing)",
+    "version": "1.300.0"
+  },
+  "plugins": [
+    {
+      "name": "ecotone-skills",
+      "source": "./",
+      "description": "Complete set of Ecotone Framework skills for message-driven architecture: handlers, aggregates, event sourcing, async processing, testing, and more",
+      "version": "1.300.0",
+      "author": {
+        "name": "Ecotone Framework"
+      },
+      "homepage": "https://ecotone.tech",
+      "repository": "https://github.com/ecotoneframework/skills",
+      "license": "Apache-2.0",
+      "keywords": [
+        "php",
+        "ddd",
+        "cqrs",
+        "event-sourcing",
+        "message-driven",
+        "ecotone"
+      ],
+      "category": "development",
+      "strict": false,
+      "skills": [
+        "./skills/ecotone-handler",
+        "./skills/ecotone-aggregate",
+        "./skills/ecotone-event-sourcing",
+        "./skills/ecotone-workflow",
+        "./skills/ecotone-interceptors",
+        "./skills/ecotone-asynchronous",
+        "./skills/ecotone-resiliency",
+        "./skills/ecotone-distribution",
+        "./skills/ecotone-testing",
+        "./skills/ecotone-identifier-mapping",
+        "./skills/ecotone-metadata",
+        "./skills/ecotone-business-interface",
+        "./skills/ecotone-laravel-setup",
+        "./skills/ecotone-symfony-setup"
+      ]
+    }
+  ]
+}
