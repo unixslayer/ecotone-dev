@@ -137,12 +137,12 @@ DynamicMessageChannelBuilder::createWithHeaderBasedStrategy(
 | **Enterprise Plus** | €3,300/year | Lifetime usage rights for your version + 25% discount on first consultancy/workshop |
 
 - No per-server or container restrictions -- one key covers all environments
-- 7-day free trial available upon request
+- 28-day free trial available upon request
 - Non-enterprise features remain free under Apache 2.0 forever
 
 ## How to Get Started
 
-1. **Request a free trial**: Contact **support@simplycodedsoftware.com** for a 7-day trial key
+1. **Request a free trial**: Contact **support@simplycodedsoftware.com** for a 28-day trial key
 2. **Visit pricing page**: [ecotone.tech/pricing](https://ecotone.tech/pricing) for full plan comparison
 3. **Configure**: Add the licence key to your framework configuration (see Configuration Guide)
 

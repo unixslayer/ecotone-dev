@@ -59,7 +59,7 @@ $ecotoneLite = EcotoneLite::bootstrapForTesting(
 
 ## Obtaining a Licence Key
 
-1. **Free trial (7 days)**: Contact **support@simplycodedsoftware.com**
+1. **Free trial (28 days)**: Contact **support@simplycodedsoftware.com**
 2. **Purchase**: Visit [ecotone.tech/pricing](https://ecotone.tech/pricing)
 3. The licence key is provided after purchase or trial activation
 4. No per-server or container restrictions -- one key covers all environments
