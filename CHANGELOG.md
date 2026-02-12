@@ -3,6 +3,15 @@
 All notable changes to Ecotone will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.300.1] - 2026-02-12
+
+## What's Changed
+* Feat: enterprise skill by @dgafka in https://github.com/ecotoneframework/ecotone-dev/pull/631
+
+[Install Ecotone Skills](https://docs.ecotone.tech/other/ai-integration)
+
+**Full Changelog**: https://github.com/ecotoneframework/ecotone-dev/compare/1.300.0...1.300.1
+
 ## [1.300.0] - 2026-02-12
 
 ## What's Changed
