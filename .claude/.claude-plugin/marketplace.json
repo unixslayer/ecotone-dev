@@ -6,21 +6,28 @@
   },
   "metadata": {
     "description": "Skills for building message-driven applications with Ecotone Framework (DDD, CQRS, Event Sourcing)",
-    "version": "1.0.0"
+    "version": "1.300.0"
   },
   "plugins": [
     {
       "name": "ecotone-skills",
       "source": "./",
       "description": "Complete set of Ecotone Framework skills for message-driven architecture: handlers, aggregates, event sourcing, async processing, testing, and more",
-      "version": "1.0.0",
+      "version": "1.300.0",
       "author": {
         "name": "Ecotone Framework"
       },
       "homepage": "https://ecotone.tech",
       "repository": "https://github.com/ecotoneframework/skills",
       "license": "Apache-2.0",
-      "keywords": ["php", "ddd", "cqrs", "event-sourcing", "message-driven", "ecotone"],
+      "keywords": [
+        "php",
+        "ddd",
+        "cqrs",
+        "event-sourcing",
+        "message-driven",
+        "ecotone"
+      ],
       "category": "development",
       "strict": false,
       "skills": [

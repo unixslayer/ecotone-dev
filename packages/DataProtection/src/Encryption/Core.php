@@ -18,7 +18,6 @@ use function mb_substr;
 use function ord;
 use function pack;
 use function random_bytes;
-
 use function strlen;
 use function substr;
 
